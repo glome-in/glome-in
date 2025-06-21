@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Scroll to the games section on Browse Now button click
+    // Scroll to games section on Browse Now button
     const browseBtn = document.querySelector(".hero-text button");
     const gamesSection = document.querySelector("#games");
   
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   
-    // Handle form submission
+    // Contact form submit handler
     const contactForm = document.querySelector(".contact-form");
     if (contactForm) {
       contactForm.addEventListener("submit", (event) => {
@@ -19,17 +19,35 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   
-    // Handle clicks on game cards
+    // Click action on game cards
     const gameCards = document.querySelectorAll(".game-card");
     gameCards.forEach((card) => {
       card.addEventListener("click", () => {
-        const gameName = card.querySelector("h3")?.textContent || "This game";
+        const gameName = card.querySelector("h3")?.textContent || "this game";
         alert(`🎮 Launching ${gameName}...`);
-        // Optionally: Redirect to game page
-        // window.location.href = `./games/${gameName.toLowerCase().replace(/\s+/g, '-')}.html`;
       });
     });
   
-    console.log("✅ Murdi Gaming scripts loaded.");
+    // 🔽 Responsive nav toggle (if you add burger icon in HTML)
+    const navToggle = document.querySelector(".nav-toggle");
+    const navMenu = document.querySelector("nav ul");
+  
+    if (navToggle && navMenu) {
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("nav-open");
+      });
+    }
+  
+    // Auto-close menu on nav link click (mobile)
+    const navLinks = document.querySelectorAll("nav ul li a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (navMenu.classList.contains("nav-open")) {
+          navMenu.classList.remove("nav-open");
+        }
+      });
+    });
+  
+    console.log("✅ Murdi Gaming scripts loaded and responsive.");
   });
   
