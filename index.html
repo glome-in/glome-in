@@ -1,3 +1,93 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Murdi Gaming & Applications</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Glome</div>
+    <input type="text" placeholder="Search games..." class="search-bar" />
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Glome</h1>
+      <h2><span>Browse</span> Our Popular Games Here</h2>
+      <button>Browse Now</button>
+    </div>
+    <img src="assets/hero.jpg" alt="Hero Illustration" />
+  </section>
+
+  <section class="section" id="games">
+    <h2>Most Popular <span>Right Now</span></h2>
+    <div class="cards">
+      <div class="game-card">
+        <img src="assets/game1.png" alt="Ikka" />
+        <div class="game-info">
+          <h3>Ikka</h3>
+          <p>Multiplayer</p>
+          <div class="rating">
+            ⭐ 4.8 • 2.3M+
+          </div>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="assets/game2.png" alt="PUBG" />
+        <div class="game-info">
+          <h3>PUBG</h3>
+          <p>Battle Royale</p>
+          <div class="rating">
+            ⭐ 4.8 • 2.1M+
+          </div>
+        </div>
+      </div>
+      <!-- Add more cards here -->
+    </div>
+  </section>
+
+  <section class="section" id="apps">
+    <h2>Our <span>Applications</span></h2>
+    <p>High-performance apps to boost your productivity.</p>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About <span>Glome</span></h2>
+    <p>We create immersive games and useful applications for everyone, everywhere.</p>
+  </section>
+
+  <section class="section" id="careers">
+    <h2>Join <span>Our Team</span></h2>
+    <p >Send your resume to <a style="color: white" href="mailto:careers@glome.in">careers@glome.in</a></p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Get in <span>Touch</span></h2>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Glome & Applications</p>
+  </footer>
+
+  <script src="script/script.js"></script>
+</body>
 </html>
+
