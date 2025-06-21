@@ -1,1 +1,180 @@
-
+body {
+    margin: 0;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  
+  .logo span {
+    color: #ff2d75;
+  }
+  
+  .search-bar {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    margin: 10px;
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  nav ul li a:hover {
+    color: #ff2d75;
+  }
+  
+  .hero {
+    position: relative;
+    height: 400px;
+    background: url("imag/hero.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.6); /* Optional: for darker text contrast */
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+    color: #aaa;
+  }
+  
+  .hero-text h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+  }
+  
+  .hero-text h2 span {
+    color: #ff2d75;
+  }
+  
+  .hero-text button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ff2d75;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  
+  .section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .section h2 span {
+    color: #ff2d75;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .game-card {
+    background: #2a2a2a;
+    border-radius: 12px;
+    width: 200px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .game-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+  
+  .game-info {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .game-info h3 {
+    margin: 5px 0;
+    color: #fff;
+  }
+  
+  .rating {
+    color: #ffdd57;
+    font-size: 0.9rem;
+  }
+  
+  .contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+  }
+  
+  .contact-form button {
+    background: #ff2d75;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  footer {
+    background: #111;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
