@@ -50,4 +50,23 @@ document.addEventListener("DOMContentLoaded", () => {
   
     console.log("✅ Murdi Gaming scripts loaded and responsive.");
   });
-  
+  document.querySelector('.nav-toggle').addEventListener('click', () => {
+    document.querySelector('.nav-menu').classList.toggle('active');
+  });
+  document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()})
+    });
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' })};
+        
+    document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
