@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (contactForm) {
       contactForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        alert("✅ Message sent! Thank you for contacting Murdi Gaming.");
+        alert("✅ Message sent! Thank you for contacting Glome");
         contactForm.reset();
       });
     }
