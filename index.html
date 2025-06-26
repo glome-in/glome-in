@@ -3,35 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Glome is a creative tech company focused on building impactful softwares, games and electronics products which help to enhance our lives. We are passionate about combining technology with imagination to deliver applications and games that are both functional and fun.  ">
+  <meta name="keywords" content="Glome, Softwares, Products, IKKA, Games, Company">
+  <meta name="author" content="Glome OPC Pvt Ltd">
   <title>Glome</title>
-  <link rel="icon"  href="assets/logo_low.png" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon"  href="assets/logo_low1.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo" style="display: flex; align-items: center; gap: 8px;">
-        <img src="assets/high_logo.png" alt="Glome Logo" style="height: 45px; width: 45px; object-fit: contain; display: block; margin-left: 0; scale:2.0;">
-        <span>Glome</span></div>
-    <input type="text" placeholder="Search games..." class="search-bar" />
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/games/index.html">Games</a></li>
-        <li><a href="pages/apps/index.html">Apps</a></li>
-        <li><a href="pages/softwares/index.html">Software</a></li>
-        <li><a href="pages/products/index.html">Products</a></li>
-        <li><a href="pages/career.html">Careers</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <header class="navbar" id="my-navbar"></header>
 
   <section class="hero">
     <div class="hero-content">
       <h1>Welcome to Glome</h1>
-      <h2><span>Browse</span> Our Popular Games Here</h2>
+      <h2><span>Browse</span> Our Popular Products Here</h2>
       <button>Browse Now</button>
     </div>
     <img src="assets/hero.jpg" alt="Hero Illustration" />
@@ -41,40 +27,28 @@
     <h2>Upcoming<span>Releases</span></h2>
     <div class="cards">
       <div class="game-card" onclick="location.href='games.html'">
-        <!-- <img src="assets/card.png" alt="Ikka" /> -->
+        <img src="assets/card.png" alt="Ikka" />
         <div class="game-info">
           <h3>Ikka</h3>
           <p>Card • Classic</p>
         </div>
       </div>
-      <div class="game-card" onclick="location.href='apps.html'">
+      <!-- <div class="game-card" onclick="location.href='apps.html'">
         <img src="assets/new-app.png" alt="Murdi Organizer"  style="height: 32px; width: 32px;"/>
         <div class="game-info">
           <h3>Murdi Organizer</h3>
           <p>Productivity App</p>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
- 
-  <section id="contact" class="section">
-    <h2>Contact <span>Us</span></h2>
-    <p>Email : glome.in.official@gmail.com</p>
-    <!-- <p>Phone: +91 98765 43210</p>
-    <p>Address: 123 Gaming Avenue, Murdi City, India</p> -->
-  </section>
-
-  <section id="about" class="section">
-    <h2>About <span>Us</span></h2>
-    <p>Glome is a dynamic platform bringing the latest games and utility software under one brand. We aim to deliver exciting gaming experiences and practical tools for modern users.</p>
-  </section>
-
-  <footer class="section" style="text-align: center; font-size: 0.9rem; color: #aaa;">
-    <p> copyright &copy; 2025 Glome. All rights reserved.</p>
-  </footer>
+  <footer class="section" id="footer"></footer>
 
   <script src="script.js"></script>
 </body>
-</body>
 </html>
 
+<script>
+  createHeader('..');
+  createFooter('..');
+</script>
