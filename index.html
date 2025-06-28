@@ -1,54 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Glome is a creative tech company focused on building impactful softwares, games and electronics products which help to enhance our lives. We are passionate about combining technology with imagination to deliver applications and games that are both functional and fun.  ">
-  <meta name="keywords" content="Glome, Softwares, Products, IKKA, Games, Company">
-  <meta name="author" content="Glome OPC Pvt Ltd">
-  <title>Glome</title>
-  <link rel="icon"  href="assets/logo_low1.png" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-  <header class="navbar" id="my-navbar"></header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Glome is a creative tech company focused on building impactful softwares, games and electronics products which help to enhance our lives. We are passionate about combining technology with imagination to deliver applications and games that are both functional and fun.  "
+    />
+    <meta
+      name="keywords"
+      content="Glome, Softwares, Products, IKKA, Games, Company"
+    />
+    <meta name="author" content="Glome OPC Pvt Ltd" />
+    <title>Glome</title>
+    <link rel="icon" href="assets/logo_low1.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar" id="my-navbar"></header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to Glome</h1>
-      <h2><span>Browse</span> Our Popular Products Here</h2>
-      <button>Browse Now</button>
-    </div>
-    <img src="assets/hero.jpg" alt="Hero Illustration" />
-  </section>
+    <section class="hero" id="main-body">
+      <div class="hero-overlay" >
+        <div class="hero-content"> 
+          <h1> Welcome to Glome </h1>
+          <h2><span class="glome-highlight">Browse</span> Our Popular Products Here</h2>
+      </div>
+    </section>
 
-  <section class="section" id="latest-updates">
-    <h2>Upcoming<span>Releases</span></h2>
-    <div class="cards">
-      <div class="game-card" onclick="location.href='games.html'">
-        <img src="assets/card.png" alt="Ikka" />
-        <div class="game-info">
-          <h3>Ikka</h3>
-          <p>Card • Classic</p>
+    <section class="section" id="latest-updates">
+      <h2>Upcoming<span>Releases</span></h2>
+      <div class="cards">
+        <div class="game-card" onclick="location.href='games/ikka.html'">
+          <img src="assets/card.png" alt="Ikka" />
+          <div class="game-info">
+            <h3>Ikka</h3>
+            <p>Card • Classic</p>
+          </div>
         </div>
       </div>
-      <!-- <div class="game-card" onclick="location.href='apps.html'">
-        <img src="assets/new-app.png" alt="Murdi Organizer"  style="height: 32px; width: 32px;"/>
-        <div class="game-info">
-          <h3>Murdi Organizer</h3>
-          <p>Productivity App</p>
-        </div>
-      </div> -->
-    </div>
-  </section>
-  <footer class="section" id="footer"></footer>
+    </section>
+    <footer class="section" id="footer"></footer>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+    
+  </body>
 </html>
 
 <script>
-  createHeader('..');
-  createFooter('..');
+  createHeader("..");
+  createFooter("..");
 </script>
