@@ -48,7 +48,6 @@
 .social-icons a img {
     width: 28px;
     height: 28px;
-    filter: brightness(0) invert(1);
     transition: 0.3s ease;
 }
 
@@ -112,6 +111,3 @@
     min-height: 180px;
     /* Ensure enough height to avoid overlap */
 }
-
-
-
