@@ -1,0 +1,117 @@
+.footer {
+    background: #1c1c1c;
+    color: #f0f0f0;
+    padding: 60px 20px 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: start;
+}
+
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f7b72c;
+}
+
+.footer-section p,
+.footer-section li,
+.footer-section a {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a:hover {
+    color: #f7b72c;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    padding-right: 20px;
+}
+
+.social-icons a img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+    transition: 0.3s ease;
+}
+
+.social-icons a img:hover {
+    filter: brightness(0) invert(0.7) sepia(1) hue-rotate(30deg);
+}
+
+.developer .dev-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.developer .dev-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #999;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .social-icons a img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Space between elements inside section */
+}
+
+/* Specific fix for social + developer sections */
+.footer-section.social,
+.footer-section.developer {
+    min-height: 180px;
+    /* Ensure enough height to avoid overlap */
+}
+
+
+

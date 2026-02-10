@@ -1,64 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glome</title>
-  <link rel="icon"  href="assets/logo_low.png" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title>Glome.in | Creating Beautiful Intelligent Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Glome.in is a product company creating beautiful, intelligent platforms across fashion, home design, gaming, and future mobility.">
+  <link rel="stylesheet" href="css/dark.css">
+  <link rel="stylesheet" href="css/body.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script src="js/theme.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/contact.js" defer></script>
+  <script src="js/darkmode.js" defer></script>
+
+  <link rel="icon" href="assets/logo_low.png" />
 </head>
+
 <body>
-  <header class="navbar">
-    <div class="logo" style="display: flex; align-items: center; gap: 8px;">
-        <img src="assets/high_logo.png" alt="Glome Logo" style="height: 45px; width: 45px; object-fit: contain; display: block; margin-left: 0;">
-        <span>Glome</span></div>
-    <input type="text" placeholder="Search games..." class="search-bar" />
-    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/games/index.html">Games</a></li>
-        <li><a href="pages/apps/index.html">Apps</a></li>
-        <li><a href="pages/softwares/index.html">Software</a></li>
-        <li><a href="pages/products/index.html">Products</a></li>
-        <li><a href="pages/career.html">Careers</a></li>
-        <li><a href="pages/about.html">About</a></li>
-        <li><a href="pages/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+
+  <nav>
+    <div class="nav-wrap">
+      <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+        <img src="assets/high_logo.png" alt="Glome Logo"
+          style="height: 30px; width: 30px; object-fit: contain; display: block; margin-left: 0; scale: 2.0;">
+        <div class="brand">Glome<span>.in</span></div>
+      </div>
+
+      <div class="nav-links">
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        <a href="#">Home</a>
+        <a href="#games">Games</a>
+        <a href="#softwares">Softwares</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#carrier">Carriers</a>
+      </div>
+    </div>
+  </nav>
 
   <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to Glome</h1>
-      <h2><span>Browse</span> Our Popular Games Here</h2>
-      <button>Browse Now</button>
-    </div>
-    <img src="assets/hero.jpg" alt="Hero Illustration" />
+    <h1>We Create <span>Beautiful Intelligent Products</span></h1>
+    <p>
+      glome.in is a design-led technology company building
+      emotionally engaging, future-ready platforms across lifestyle,
+      entertainment, and intelligent mobility.
+    </p>
   </section>
 
-  <section class="section" id="latest-updates">
-    <h2>Latest <span>Releases</span></h2>
-    <div class="cards">
-      <div class="game-card" onclick="location.href='games.html'">
-        <img src="assets/card.png" alt="Ikka" />
-        <div class="game-info">
-          <h3>Ikka</h3>
-          <p>Card • Classic</p>
+  <section class="section" id="products">
+    <h2>Our Products</h2>
+    <p class="sub">
+      Each product under glome is crafted with deep attention to design,
+      usability, and long-term impact.
+    </p>
+
+    <div class="grid">
+      <a href="https://www.mehfilotus.com" class="card-link">
+        <div class="card">
+          <span class="tag fashion">Ethnic Fashion</span>
+          <h3>Mehfilotus</h3>
+          <p>
+            A premium ethnic wear destination celebrating Indian culture
+            through timeless fashion, jewellery, and festive elegance.
+          </p>
         </div>
-      </div>
-      <div class="game-card" onclick="location.href='apps.html'">
-        <img src="assets/new-app.png" alt="Murdi Organizer"  style="height: 32px; width: 32px;"/>
-        <div class="game-info">
-          <h3>Murdi Organizer</h3>
-          <p>Productivity App</p>
+      </a>
+
+      <a href="https://www.delome.in" class="card-link">
+        <div class="card">
+          <span class="tag home">Home & AI</span>
+          <h3>Delome</h3>
+          <p>
+            Intelligent home beautification using lighting, greenery,
+            and AI-assisted design to create calm, soulful living spaces.
+          </p>
         </div>
-      </div>
+      </a>
+
+      <a href="https://www.murdigames.com" class="card-link">
+        <div class="card">
+          <span class="tag games">Gaming Studio</span>
+          <h3>Murdigames</h3>
+          <p>
+            A creative gaming studio producing delightful mobile
+            and desktop games with strong visual identity and fun gameplay.
+          </p>
+        </div>
+      </a>
+
+      <a href="odome.html" class="card-link">
+        <div class="card">
+          <span class="tag mobility">Vehicle OS</span>
+          <h3>Odome</h3>
+          <p>
+            A next-generation vehicle operating system enhancing driving
+            with navigation, real-time warnings, smart maps,
+            and autonomous driving support.
+          </p>
+        </div>
+      </a>
+
+
+      <!-- Robotics & Electronics -->
+      <a href="glome.html" class="card-link">
+
+        <div class="card">
+          <span class="tag robotics">Robotics & Electronics</span>
+          <h3>Glome</h3>
+          <p>
+            Advanced Robotics & Electronics focuses on building intelligent robotic systems and electronic
+            products, combining advanced
+            automation, autonomous intelligence, human–machine interaction, and custom hardware design—from
+            embedded systems and IoT
+            devices to scalable, real-world solutions.
+          </p>
+        </div>
+      </a>
+
+      <!-- Networking & 2D / 3D Simulation  -->
+      <a href="simmelab.html" class="card-link">
+        <div class="card">
+          <span class="tag network">Networking & Wireless</span>
+          <h3>Simmelab</h3>
+          <p>
+            High-fidelity simulation and emulation platform combining LTE, 5G, and future 6G networking with
+            powerful 2D/3D
+            environments, digital twins, and AI-driven experimentation for next-generation systems.
+          </p>
+        </div>
+      </a>
+
+      <a href="mobileapps.html" class="card-link">
+        <div class="card">
+          <span class="tag mobile">Mobile Apps</span>
+          <h3>Glome Mobile Apps</h3>
+          <p>
+            Developing intelligent and seamless mobile applications across Android and iOS platforms,
+            integrating AI,
+            IoT, and advanced UX to deliver next-level user experiences.
+          </p>
+        </div>
+      </a>
+
+      <a href="softwares.html" class="card-link">
+        <div class="card">
+          <span class="tag software">Software</span>
+          <h3>Glome Software</h3>
+          <p>
+            Developing cutting-edge software solutions including desktop, web, and cloud applications with
+            AI,
+            simulations, and automation, designed for performance, scalability, and innovation.
+          </p>
+        </div>
+      </a>
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <section class="feature">
+    <h2>Design is at the Core of Everything</h2>
+    <p>
+      At glome, technology exists to feel human.
+      Every interface, animation, and experience is built to be calm,
+      beautiful, and intuitive — whether you’re shopping,
+      decorating your home, playing a game, or driving a vehicle.
+    </p>
+  </section>
+  <div id="footer-placeholder"></div>
+
+
+
 </body>
-</body>
+
 </html>
-

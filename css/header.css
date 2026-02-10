@@ -1,0 +1,102 @@
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, .75);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+
+.nav-wrap {
+    margin-left: 50px;
+    margin-right: 20px;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.brand span {
+    color: var(--blue)
+}
+
+.nav-links a {
+    margin-left: 26px;
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--ink)
+}
+
+@media(max-width:700px) {
+    /* Reduce nav-wrap margins and allow wrapping */
+    .nav-wrap {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 12px 16px;
+        display: flex;
+        flex-wrap: wrap;
+        /* allow multiple rows */
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Brand/logo on first row */
+    .brand {
+        font-size: 22px;
+        flex: 1 1 auto;
+        /* allow to shrink if needed */
+    }
+
+    /* Nav links row: right side buttons */
+    .nav-links {
+        order: 2;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-left: auto;
+        /* push to right */
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        /* remove extra spacing in mobile */
+        font-size: 14px;
+        padding: 6px 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        background: rgba(247, 183, 44, 0.2);
+        color: var(--ink);
+    }
+
+    /* Optional: if you have a search bar */
+    .nav-search {
+        order: 3;
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .nav-search input {
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+    }
+}
