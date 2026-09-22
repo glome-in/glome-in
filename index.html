@@ -7,173 +7,1194 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
-    content="Glome.in is a product company creating beautiful, intelligent platforms across fashion, home design, gaming, and future mobility.">
+    content="Glome.in is a product company creating beautiful, intelligent applications, software, operating systems, and electronic products.">
+
   <link rel="stylesheet" href="css/dark.css">
   <link rel="stylesheet" href="css/body.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
+
   <script src="js/theme.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/contact.js" defer></script>
   <script src="js/darkmode.js" defer></script>
 
   <link rel="icon" href="assets/logo_low.png" />
+
+  <style>
+    /* =====================================================
+       PRODUCTS SECTION
+    ===================================================== */
+
+    .products-section {
+      padding: 90px 5%;
+      overflow: hidden;
+    }
+
+    .products-heading {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 60px;
+    }
+
+    .products-heading h2 {
+      margin-bottom: 12px;
+    }
+
+    .products-heading p {
+      opacity: 0.7;
+      line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       ELECTRONICS SECTION
+    ===================================================== */
+
+    .electronics-section {
+      max-width: 1250px;
+      margin: 0 auto 90px;
+    }
+
+    .electronics-heading {
+      margin-bottom: 25px;
+    }
+
+    .electronics-heading h3 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .electronics-heading p {
+      opacity: 0.7;
+      margin: 0;
+    }
+
+
+    /* =====================================================
+       ELECTRONICS CAROUSEL
+    ===================================================== */
+
+    .electronics-carousel-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 30px;
+    }
+
+    .electronics-carousel {
+      display: flex;
+      width: 100%;
+      transition: transform 0.6s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    .electronics-slide {
+      min-width: 100%;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .electronics-card {
+      position: relative;
+      min-height: 600px;
+
+      border-radius: 30px;
+      overflow: hidden;
+
+      background:
+        linear-gradient(135deg,
+          rgba(255, 255, 255, 0.08),
+          rgba(255, 255, 255, 0.02));
+
+      border: 1px solid rgba(128, 128, 128, 0.2);
+    }
+
+
+    /* =====================================================
+       LARGE PRODUCT IMAGE
+    ===================================================== */
+
+    .electronics-image {
+      position: absolute;
+      inset: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 40px;
+
+      background:
+        radial-gradient(circle at center,
+          rgba(120, 120, 120, 0.18),
+          transparent 60%);
+    }
+
+    .electronics-image img {
+      width: 75%;
+      height: 75%;
+
+      object-fit: contain;
+
+      filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.3));
+
+      transition: transform 0.5s ease;
+    }
+
+    .electronics-card:hover .electronics-image img {
+      transform: scale(1.04);
+    }
+
+
+    /* =====================================================
+       DARK GRADIENT OVER IMAGE
+    ===================================================== */
+
+    .electronics-overlay {
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(to top,
+          rgba(0, 0, 0, 0.88) 0%,
+          rgba(0, 0, 0, 0.48) 35%,
+          rgba(0, 0, 0, 0.02) 75%);
+
+      pointer-events: none;
+    }
+
+
+    /* =====================================================
+       PRODUCT INFORMATION
+    ===================================================== */
+
+    .electronics-info {
+      position: absolute;
+      left: 45px;
+      right: 45px;
+      bottom: 40px;
+
+      color: white;
+
+      z-index: 2;
+    }
+
+    .electronics-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+
+      padding: 7px 13px;
+
+      border-radius: 30px;
+
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+
+      backdrop-filter: blur(10px);
+
+      font-size: 12px;
+      font-weight: 600;
+
+      margin-bottom: 14px;
+    }
+
+    .electronics-info h3 {
+      font-size: 40px;
+      margin: 0 0 10px;
+    }
+
+    .electronics-info p {
+      max-width: 650px;
+
+      margin: 0;
+
+      line-height: 1.7;
+
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+
+    /* =====================================================
+       CAROUSEL BUTTONS
+    ===================================================== */
+
+    .electronics-control {
+      position: absolute;
+
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      z-index: 5;
+
+      width: 52px;
+      height: 52px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(255, 255, 255, 0.25);
+
+      background: rgba(0, 0, 0, 0.35);
+
+      backdrop-filter: blur(12px);
+
+      color: white;
+
+      font-size: 20px;
+
+      cursor: pointer;
+
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .electronics-control:hover {
+      background: rgba(0, 0, 0, 0.6);
+
+      transform:
+        translateY(-50%) scale(1.08);
+    }
+
+    .electronics-prev {
+      left: 20px;
+    }
+
+    .electronics-next {
+      right: 20px;
+    }
+
+
+    /* =====================================================
+       CAROUSEL DOTS
+    ===================================================== */
+
+    .electronics-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+
+      margin-top: 22px;
+    }
+
+    .electronics-dot {
+      width: 8px;
+      height: 8px;
+
+      border: none;
+      padding: 0;
+
+      border-radius: 50%;
+
+      background: rgba(128, 128, 128, 0.35);
+
+      cursor: pointer;
+
+      transition:
+        width 0.3s ease,
+        background 0.3s ease;
+    }
+
+    .electronics-dot.active {
+      width: 28px;
+
+      border-radius: 10px;
+
+      background: currentColor;
+    }
+
+
+    /* =====================================================
+       SOFTWARE / APPLICATIONS
+    ===================================================== */
+
+    .software-section {
+      max-width: 1250px;
+      margin: 0 auto;
+    }
+
+    .software-heading {
+      margin-bottom: 30px;
+    }
+
+    .software-heading h3 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .software-heading p {
+      opacity: 0.7;
+      margin: 0;
+    }
+
+    .products-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 24px;
+    }
+
+
+    /* =====================================================
+       PRODUCT CARD
+    ===================================================== */
+
+    .product-card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .product-card {
+      position: relative;
+
+      min-height: 280px;
+
+      padding: 32px;
+
+      border-radius: 24px;
+
+      border: 1px solid rgba(128, 128, 128, 0.18);
+
+      background:
+        linear-gradient(145deg,
+          rgba(255, 255, 255, 0.07),
+          rgba(255, 255, 255, 0.02));
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+      overflow: hidden;
+    }
+
+    .product-card:hover {
+      transform: translateY(-7px);
+
+      border-color:
+        rgba(128, 128, 128, 0.4);
+
+      box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.12);
+    }
+
+
+    /* =====================================================
+       CORNER ICON
+    ===================================================== */
+
+    .product-icon {
+      position: absolute;
+
+      top: 22px;
+      right: 22px;
+
+      width: 52px;
+      height: 52px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 16px;
+
+      font-size: 24px;
+
+      background:
+        rgba(128, 128, 128, 0.12);
+
+      border:
+        1px solid rgba(128, 128, 128, 0.18);
+    }
+
+
+    /* =====================================================
+       PRODUCT TYPE
+    ===================================================== */
+
+    .product-type {
+      display: inline-block;
+
+      padding: 6px 11px;
+
+      border-radius: 30px;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.6px;
+
+      background:
+        rgba(128, 128, 128, 0.12);
+
+      margin-bottom: 35px;
+    }
+
+    .product-card h3 {
+      font-size: 28px;
+
+      margin:
+        0 0 12px;
+    }
+
+    .product-card p {
+      line-height: 1.7;
+
+      opacity: 0.72;
+
+      margin: 0;
+    }
+
+    .product-arrow {
+      position: absolute;
+
+      bottom: 25px;
+      right: 28px;
+
+      font-size: 20px;
+
+      opacity: 0.4;
+
+      transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+    }
+
+    .product-card:hover .product-arrow {
+      transform: translateX(6px);
+      opacity: 1;
+    }
+
+
+    /* =====================================================
+       ICON COLORS
+    ===================================================== */
+
+    .app-icon {
+      background: rgba(80, 140, 255, 0.12);
+    }
+
+    .software-icon {
+      background: rgba(170, 100, 255, 0.12);
+    }
+
+    .os-icon {
+      background: rgba(50, 190, 145, 0.12);
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .electronics-card {
+        min-height: 520px;
+      }
+
+      .electronics-image img {
+        width: 80%;
+        height: 65%;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .products-section {
+        padding:
+          70px 20px;
+      }
+
+      .electronics-card {
+        min-height: 500px;
+
+        border-radius: 22px;
+      }
+
+      .electronics-image {
+        padding: 20px;
+      }
+
+      .electronics-image img {
+        width: 90%;
+        height: 62%;
+      }
+
+      .electronics-info {
+        left: 25px;
+        right: 25px;
+        bottom: 28px;
+      }
+
+      .electronics-info h3 {
+        font-size: 30px;
+      }
+
+      .electronics-info p {
+        font-size: 14px;
+      }
+
+      .electronics-control {
+        width: 44px;
+        height: 44px;
+      }
+
+      .electronics-prev {
+        left: 10px;
+      }
+
+      .electronics-next {
+        right: 10px;
+      }
+
+      .product-card {
+        padding: 26px;
+      }
+
+    }
+  </style>
+
 </head>
+
 
 <body>
 
+
+  <!-- =====================================================
+       NAVIGATION
+  ===================================================== -->
+
   <nav>
+
     <div class="nav-wrap">
-      <div class="logo" style="display: flex; align-items: center; gap: 8px;">
-        <img src="assets/high_logo.png" alt="Glome Logo"
-          style="height: 30px; width: 30px; object-fit: contain; display: block; margin-left: 0; scale: 2.0;">
-        <div class="brand">Glome<span>.in</span></div>
+
+      <div class="logo" style="
+          display:flex;
+          align-items:center;
+          gap:8px;
+        ">
+
+        <img src="assets/high_logo.png" alt="Glome Logo" style="
+            height:30px;
+            width:30px;
+            object-fit:contain;
+            display:block;
+            margin-left:0;
+            scale:2.0;
+          ">
+
+        <div class="brand">
+          Glome<span>.in</span>
+        </div>
+
       </div>
+
 
       <div class="nav-links">
-        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <a href="#">Home</a>
-        <a href="#games">Games</a>
-        <a href="#softwares">Softwares</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#products">Contact</a>
-        <a href="carriers.html">Carriers</a>
+
+        <button class="theme-toggle" onclick="toggleTheme()">
+          🌙
+        </button>
+
+        <a href="#">
+          Home
+        </a>
+
+        <a href="#products">
+          Products
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#products">
+          Contact
+        </a>
+
+        <a href="carriers.html">
+          Careers
+        </a>
+
       </div>
+
     </div>
+
   </nav>
 
+
+  <!-- =====================================================
+       HERO
+  ===================================================== -->
+
   <section class="hero">
-    <h1>We Create <span>Beautiful Intelligent Products</span></h1>
+
+    <h1>
+      We Create
+      <span>
+        Beautiful Intelligent Products
+      </span>
+    </h1>
+
     <p>
       glome.in is a design-led technology company building
-      emotionally engaging, future-ready platforms across lifestyle,
-      entertainment, and intelligent mobility.
+      emotionally engaging, future-ready platforms across
+      lifestyle, entertainment, intelligent mobility,
+      software, and electronics.
     </p>
+
   </section>
 
-  <section class="section" id="products">
-    <h2>Our Products</h2>
-    <p class="sub">
-      Each product under glome is crafted with deep attention to design,
-      usability, and long-term impact.
-    </p>
 
-    <div class="grid">
-      <a href="https://www.mehfilotus.com" class="card-link">
-        <div class="card">
-          <span class="tag fashion">Ethnic Fashion</span>
-          <h3>Mehfilotus</h3>
-          <p>
-            A premium ethnic wear destination celebrating Indian culture
-            through timeless fashion, jewellery, and festive elegance.
-          </p>
-        </div>
-      </a>
+  <!-- =====================================================
+       PRODUCTS
+  ===================================================== -->
 
-      <a href="https://www.delome.in" class="card-link">
-        <div class="card">
-          <span class="tag home">Home & AI</span>
-          <h3>Delome</h3>
-          <p>
-            Intelligent home beautification using lighting, greenery,
-            and AI-assisted design to create calm, soulful living spaces.
-          </p>
-        </div>
-      </a>
-
-      <a href="https://www.murdigames.com" class="card-link">
-        <div class="card">
-          <span class="tag games">Gaming Studio</span>
-          <h3>Murdigames</h3>
-          <p>
-            A creative gaming studio producing delightful mobile
-            and desktop games with strong visual identity and fun gameplay.
-          </p>
-        </div>
-      </a>
-
-      <a href="odome.html" class="card-link">
-        <div class="card">
-          <span class="tag mobility">Vehicle OS</span>
-          <h3>Odome</h3>
-          <p>
-            A next-generation vehicle operating system enhancing driving
-            with navigation, real-time warnings, smart maps,
-            and autonomous driving support.
-          </p>
-        </div>
-      </a>
+  <section class="products-section" id="products">
 
 
-      <!-- Robotics & Electronics -->
-      <a href="glome.html" class="card-link">
+    <div class="products-heading">
 
-        <div class="card">
-          <span class="tag robotics">Robotics & Electronics</span>
-          <h3>Glome</h3>
-          <p>
-            Advanced Robotics & Electronics focuses on building intelligent robotic systems and electronic
-            products, combining advanced
-            automation, autonomous intelligence, human–machine interaction, and custom hardware design—from
-            embedded systems and IoT
-            devices to scalable, real-world solutions.
-          </p>
-        </div>
-      </a>
+      <h2>
+        Our Products
+      </h2>
 
-      <!-- Networking & 2D / 3D Simulation  -->
-      <a href="simmelab.html" class="card-link">
-        <div class="card">
-          <span class="tag network">Networking & Wireless</span>
-          <h3>Simmelab</h3>
-          <p>
-            High-fidelity simulation and emulation platform combining LTE, 5G, and future 6G networking with
-            powerful 2D/3D
-            environments, digital twins, and AI-driven experimentation for next-generation systems.
-          </p>
-        </div>
-      </a>
+      <p>
+        Each product under glome is crafted with deep
+        attention to design, usability, intelligence,
+        and long-term impact.
+      </p>
 
-      <a href="mobileapps.html" class="card-link">
-        <div class="card">
-          <span class="tag mobile">Mobile Apps</span>
-          <h3>Glome Mobile Apps</h3>
-          <p>
-            Developing intelligent and seamless mobile applications across Android and iOS platforms,
-            integrating AI,
-            IoT, and advanced UX to deliver next-level user experiences.
-          </p>
-        </div>
-      </a>
-
-      <a href="softwares.html" class="card-link">
-        <div class="card">
-          <span class="tag software">Software</span>
-          <h3>Glome Software</h3>
-          <p>
-            Developing cutting-edge software solutions including desktop, web, and cloud applications with
-            AI,
-            simulations, and automation, designed for performance, scalability, and innovation.
-          </p>
-        </div>
-      </a>
     </div>
+
+
+    <!-- =================================================
+         ELECTRONICS PRODUCTS
+    ================================================== -->
+
+    <div class="electronics-section">
+
+      <div class="electronics-heading">
+
+        <h3>
+          Electronics Products
+        </h3>
+
+        <p>
+          Intelligent hardware and electronic products
+          engineered by Glome.
+        </p>
+
+      </div>
+
+
+      <div class="electronics-carousel-container">
+
+
+        <div class="electronics-carousel" id="electronicsCarousel">
+
+
+          <!-- =========================================
+               PRODUCT 1 — ROTATING DISK
+          ========================================== -->
+
+          <div class="electronics-slide">
+
+            <a href="glome.html" style="
+                text-decoration:none;
+                color:inherit;
+              ">
+
+              <div class="electronics-card">
+
+
+                <div class="electronics-image">
+
+                  <img src="assets/rotating-disk.png" alt="Glome Rotating Disk">
+
+                </div>
+
+
+                <div class="electronics-overlay">
+                </div>
+
+
+                <div class="electronics-info">
+
+                  <span class="electronics-tag">
+                    ⚙️ Electronics
+                  </span>
+
+                  <h3>
+                    Rotating Disk
+                  </h3>
+
+                  <p>
+                    An intelligent rotating electronic
+                    system exploring precision motion,
+                    embedded electronics, automation,
+                    and intelligent control.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </a>
+
+          </div>
+
+
+          <!-- =========================================
+               PRODUCT 2 — FUTURE ELECTRONICS
+               Uncomment when ready
+          ========================================== -->
+
+          <!--
+
+          <div class="electronics-slide">
+
+            <a
+              href="product-2.html"
+              style="
+                text-decoration:none;
+                color:inherit;
+              ">
+
+              <div class="electronics-card">
+
+                <div class="electronics-image">
+
+                  <img
+                    src="assets/product-2.png"
+                    alt="Glome Product 2">
+
+                </div>
+
+                <div class="electronics-overlay">
+                </div>
+
+                <div class="electronics-info">
+
+                  <span class="electronics-tag">
+                    ⚙️ Electronics
+                  </span>
+
+                  <h3>
+                    Product Name
+                  </h3>
+
+                  <p>
+                    Product description goes here.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </a>
+
+          </div>
+
+          -->
+
+
+        </div>
+
+
+        <!-- PREVIOUS -->
+
+        <button class="electronics-control electronics-prev" onclick="changeElectronicsSlide(-1)"
+          aria-label="Previous electronics product">
+
+          ←
+
+        </button>
+
+
+        <!-- NEXT -->
+
+        <button class="electronics-control electronics-next" onclick="changeElectronicsSlide(1)"
+          aria-label="Next electronics product">
+
+          →
+
+        </button>
+
+
+      </div>
+
+
+      <!-- DOTS -->
+
+      <div class="electronics-dots" id="electronicsDots">
+
+      </div>
+
+    </div>
+
+
+    <!-- =================================================
+         APPLICATIONS / SOFTWARE / OS
+    ================================================== -->
+
+    <div class="software-section">
+
+      <div class="software-heading">
+
+        <h3>
+          Applications & Software
+        </h3>
+
+        <p>
+          Digital products and platforms built
+          across different areas of technology.
+        </p>
+
+      </div>
+
+
+      <div class="products-grid">
+
+
+        <!-- =========================================
+             MEHFILOTUS
+        ========================================== -->
+
+        <a href="https://www.mehfilotus.com" class="product-card-link">
+
+          <div class="product-card">
+
+
+            <div class="product-icon app-icon">
+              📱
+            </div>
+
+
+            <span class="product-type">
+              Mobile Application
+            </span>
+
+
+            <h3>
+              Mehfilotus
+            </h3>
+
+
+            <p>
+              A premium ethnic wear destination
+              celebrating Indian culture through
+              timeless fashion, jewellery, and
+              festive elegance.
+            </p>
+
+
+            <span class="product-arrow">
+              →
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- =========================================
+             DELOME
+        ========================================== -->
+
+        <a href="https://www.delome.in" class="product-card-link">
+
+          <div class="product-card">
+
+
+            <div class="product-icon app-icon">
+              📱
+            </div>
+
+
+            <span class="product-type">
+              Mobile Application
+            </span>
+
+
+            <h3>
+              Delome
+            </h3>
+
+
+            <p>
+              Intelligent home beautification using
+              lighting, greenery, and AI-assisted
+              design to create calm, soulful
+              living spaces.
+            </p>
+
+
+            <span class="product-arrow">
+              →
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- =========================================
+             ODOME
+        ========================================== -->
+
+        <a href="odome.html" class="product-card-link">
+
+          <div class="product-card">
+
+
+            <div class="product-icon os-icon">
+              🖥️
+            </div>
+
+
+            <span class="product-type">
+              Operating System
+            </span>
+
+
+            <h3>
+              Odome
+            </h3>
+
+
+            <p>
+              A next-generation vehicle operating
+              system enhancing driving with navigation,
+              real-time warnings, smart maps,
+              connected mobility, and autonomous
+              driving support.
+            </p>
+
+
+            <span class="product-arrow">
+              →
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- =========================================
+             NETME
+        ========================================== -->
+
+        <a href="simmelab.html" class="product-card-link">
+
+          <div class="product-card">
+
+
+            <div class="product-icon software-icon">
+              💻
+            </div>
+
+
+            <span class="product-type">
+              Software
+            </span>
+
+
+            <h3>
+              Netme
+            </h3>
+
+
+            <p>
+              A high-fidelity simulation and emulation
+              platform combining LTE, 5G, and future
+              6G networking with powerful 2D/3D
+              environments, digital twins, and
+              AI-driven experimentation.
+            </p>
+
+
+            <span class="product-arrow">
+              →
+            </span>
+
+          </div>
+
+        </a>
+
+
+      </div>
+
+    </div>
+
   </section>
+
+
+  <!-- =====================================================
+       FEATURE
+  ===================================================== -->
 
   <section class="feature">
-    <h2>Design is at the Core of Everything</h2>
+
+    <h2>
+      Design is at the Core of Everything
+    </h2>
+
     <p>
       At glome, technology exists to feel human.
-      Every interface, animation, and experience is built to be calm,
-      beautiful, and intuitive — whether you’re shopping,
-      decorating your home, playing a game, or driving a vehicle.
+      Every interface, animation, and experience is
+      built to be calm, beautiful, and intuitive —
+      whether you’re using an application,
+      working with software, driving a vehicle,
+      or interacting with intelligent electronics.
     </p>
+
   </section>
-  <div id="footer-placeholder"></div>
 
 
+  <div id="footer-placeholder">
+  </div>
 
-</body>
 
-</html>
+  <!-- =====================================================
+       ELECTRONICS CAROUSEL JAVASCRIPT
+  ===================================================== -->
+
+  <script>
+
+    let electronicsCurrentSlide = 0;
+
+    const electronicsCarousel =
+      document.getElementById(
+        "electronicsCarousel"
+      );
+
+    const electronicsSlides =
+      document.querySelectorAll(
+        ".electronics-slide"
+      );
+
+    const electronicsDots =
+      document.getElementById(
+        "electronicsDots"
+      );
+
+
+    /*
+     * Create carousel dots automatically.
+     * This means adding another .electronics-slide
+     * automatically creates another dot.
+     */
+
+    electronicsSlides.forEach(
+      (_, index) => {
+
+        const dot =
+          document.createElement("button");
+
+        dot.className =
+          "electronics-dot";
+
+        dot.setAttribute(
+          "aria-label",
+          "Go to electronics product " +
+          (index + 1)
+        );
+
+        dot.addEventListener(
+          "click",
+          () => {
+            electronicsCurrentSlide = index;
+            updateElectronicsCarousel();
+          }
+        );
+
+        electronicsDots.appendChild(dot);
+
+      }
+    );
+
+
+    function updateElectronicsCarousel() {
+
+      if (!electronicsSlides.length) {
+        return;
+      }
+
+      electronicsCarousel.style.transform =
+        `translateX(-${electronicsCurrentSlide * 100}%)`;
+
+
+      const dots =
+        document.querySelectorAll(
+          ".electronics-dot"
+        );
+
+
+      dots.forEach(
+        (dot, index) => {
+
+          dot.classList.toggle(
+            "active",
+            index === electronicsCurrentSlide
+          );
+
+        }
+      );
+
+    }
+
+
+    function changeElectronicsSlide(direction) {
+
+      if (!electronicsSlides.length) {
+        return;
+      }
+
+      electronicsCurrentSlide += direction;
+
+
+      if (
+        electronicsCurrentSlide >=
+        electronicsSlides.length
+      ) {
+
+        electronicsCurrentSlide = 0;
+
+      }
+
+
+      if (electronicsCurrentSlide < 0) {
+
+        electronicsCurrentSlide =
+          electronicsSlides.length - 1;
+
+      }
+
+
+      updateElectronicsCarousel();
+
+    }
+
+
+    /*
+     * Initialize carousel
+     */
+
+    updateElectronicsCarousel();
+
+
+    /*
