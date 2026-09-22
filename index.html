@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Glome.in | Creating Beautiful Intelligent Products</title>
+  <link rel="icon" type="image/x-icon" href="assets/logo_low1.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
@@ -72,7 +73,7 @@
 
 
     /* =====================================================
-       ELECTRONICS CAROUSEL
+       ELECTRONICS CAROUSEL (FIXED)
     ===================================================== */
 
     .electronics-carousel-container {
@@ -89,7 +90,8 @@
     }
 
     .electronics-slide {
-      min-width: 100%;
+      flex: 0 0 100%;
+      /* Keeps each slide locked at 100% width, preventing squash/shrink */
       position: relative;
       box-sizing: border-box;
     }
@@ -111,7 +113,7 @@
 
 
     /* =====================================================
-       LARGE PRODUCT IMAGE
+       LARGE PRODUCT IMAGE (FIXED)
     ===================================================== */
 
     .electronics-image {
@@ -122,7 +124,8 @@
       align-items: center;
       justify-content: center;
 
-      padding: 40px;
+      padding: 0;
+      /* Removed padding to allow full coverage */
 
       background:
         radial-gradient(circle at center,
@@ -131,10 +134,13 @@
     }
 
     .electronics-image img {
-      width: 75%;
-      height: 75%;
+      width: 100%;
+      /* Covers full width of the container/card */
+      height: 100%;
+      /* Covers full height of the container/card */
 
-      object-fit: contain;
+      object-fit: cover;
+      /* Ensures image covers the area completely */
 
       filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.3));
 
@@ -499,11 +505,6 @@
         min-height: 520px;
       }
 
-      .electronics-image img {
-        width: 80%;
-        height: 65%;
-      }
-
       .products-grid {
         grid-template-columns: 1fr;
       }
@@ -525,12 +526,7 @@
       }
 
       .electronics-image {
-        padding: 20px;
-      }
-
-      .electronics-image img {
-        width: 90%;
-        height: 62%;
+        padding: 0;
       }
 
       .electronics-info {
@@ -706,24 +702,19 @@
 
         <div class="electronics-carousel" id="electronicsCarousel">
 
-
           <!-- =========================================
                PRODUCT 1 — ROTATING DISK
           ========================================== -->
 
           <div class="electronics-slide">
-
-            <a href="glome.html" style="
+            <a href="index.html" style="
                 text-decoration:none;
                 color:inherit;
               ">
-
               <div class="electronics-card">
-
-
                 <div class="electronics-image">
 
-                  <img src="assets/rotating-disk.png" alt="Glome Rotating Disk">
+                  <img src="assets/disk1.jpeg" alt="Rotating Disk">
 
                 </div>
 
@@ -741,51 +732,37 @@
                   <h3>
                     Rotating Disk
                   </h3>
-
                   <p>
                     An intelligent rotating electronic
                     system exploring precision motion,
                     embedded electronics, automation,
                     and intelligent control.
                   </p>
-
                 </div>
-
               </div>
-
             </a>
-
           </div>
 
 
           <!-- =========================================
                PRODUCT 2 — FUTURE ELECTRONICS
-               Uncomment when ready
           ========================================== -->
-
-          <!--
-
           <div class="electronics-slide">
-
-            <a
-              href="product-2.html"
-              style="
-                text-decoration:none;
-                color:inherit;
-              ">
-
+            <a href="index.html" style="
+                                    text-decoration:none;
+                                    color:inherit;
+                                  ">
               <div class="electronics-card">
-
                 <div class="electronics-image">
 
-                  <img
-                    src="assets/product-2.png"
-                    alt="Glome Product 2">
+                  <img src="assets/disk2.jpeg" alt="Rotating Disk">
 
                 </div>
+
 
                 <div class="electronics-overlay">
                 </div>
+
 
                 <div class="electronics-info">
 
@@ -794,23 +771,18 @@
                   </span>
 
                   <h3>
-                    Product Name
+                    Rotating Disk
                   </h3>
-
                   <p>
-                    Product description goes here.
+                    An intelligent rotating electronic
+                    system exploring precision motion,
+                    embedded electronics, automation,
+                    and intelligent control.
                   </p>
-
                 </div>
-
               </div>
-
             </a>
-
           </div>
-
-          -->
-
 
         </div>
 
@@ -895,10 +867,9 @@
 
 
             <p>
-              A premium ethnic wear destination
-              celebrating Indian culture through
-              timeless fashion, jewellery, and
-              festive elegance.
+              Transform your health with Mehilotus! Stay active through daily workouts, mindful yoga flows, and engaging
+              community
+              challenges designed to keep you motivated and thriving every single day.
             </p>
 
 
@@ -1196,5 +1167,8 @@
 
     updateElectronicsCarousel();
 
+  </script>
 
-    /*
+</body>
+
+</html>
